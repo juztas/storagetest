@@ -1,0 +1,13 @@
+Universe   = vanilla
+Executable = jobnanoceph.sh
+Log        = jobnanoceph/sleep.PC.log
+Output     = jobnanoceph/sleep.out.$(Cluster).$(Process)
+Error      = jobnanoceph/sleep.err.$(Cluster).$(Process)
++InteractiveUser = true
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/cmssw/cms:rhel7"
++SingularityBindCVMFS = True
+RequestMemory = 2500
+RequestCpus = 1
+#Provide information on proxy in order to access storage
+x509userproxy = $ENV(X509_USER_PROXY)
+Queue 401
