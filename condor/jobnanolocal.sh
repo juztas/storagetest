@@ -27,8 +27,9 @@ cp /storage/user/jbalcas/CMSSW_10_2_3/src/NANO2016MC.py pset-$PROCID.py
 
 LFN=`head -$PROCID /storage/user/jbalcas/CMSSW_10_2_3/src/files | tail -1`
 echo $PROCID $LFN
-
+date +%s
 cp /mnt/hadoop/$LFN .
+date +%s
 FILENAME=`basename $LFN`
 PWD=`pwd`
 FULLPATH=$PWD/$FILENAME

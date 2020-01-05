@@ -35,6 +35,13 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(-1)
 )
 
+process.Timing = cms.Service("Timing",
+  summaryOnly = cms.untracked.bool(False),
+  useJobReport = cms.untracked.bool(True)
+)
+
+
+
 # Input source
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(INPUTFILE),
