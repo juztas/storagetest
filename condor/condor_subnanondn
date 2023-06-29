@@ -10,4 +10,5 @@ RequestMemory = 2500
 RequestCpus = 1
 #Provide information on proxy in order to access storage
 x509userproxy = $ENV(X509_USER_PROXY)
++JobQueue="Normal"
 Queue 401
