@@ -28,7 +28,7 @@ process.load('Configuration.StandardSequences.FrontierConditions_GlobalTag_cff')
 
 
 process.MessageLogger.debugModules.append("XrdAdaptorInternal")
-process.MessageLogger.cerr.threshold = 'INFO'
+process.MessageLogger.cerr.threshold = 'DEBUG'
 process.MessageLogger.cerr.INFO.limit = 5000
 
 process.maxEvents = cms.untracked.PSet(
@@ -36,7 +36,7 @@ process.maxEvents = cms.untracked.PSet(
 )
 
 process.Timing = cms.Service("Timing",
-  summaryOnly = cms.untracked.bool(False),
+  summaryOnly = cms.untracked.bool(True),
   useJobReport = cms.untracked.bool(True)
 )
 
